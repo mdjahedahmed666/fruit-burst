@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <p>Hello</p>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://kit.fontawesome.com/ac87235b0c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <header class="navbar h-28 rounded-[600px] bg-[#F85559] text-white container mx-auto">
+        <div class="navbar-start">
+          <div class="ps-16">
+            <ul class="flex justify-start gap-8">
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="">
+                <a class="btn btn-ghost normal-case text-xl">Fruit Burst</a>
+              </div>
+        </div>
+        <div class="navbar-end pr-16">
+            <div class="form-control relative h- max-w-[400] rounded-[50px]">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                <i class="fa fa-search absolute right-6 top-4" style="color: #121212;" aria-hidden="true"></i>
+              </div>
+        </div>
+      </header>
+      <main>
+        <i class="fa-light fa-magnifying-glass" style="color: #121212;"></i>
+      </main>
+  </body>
 </html>
