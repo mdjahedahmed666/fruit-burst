@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
@@ -22,16 +23,27 @@
   </head>
   <body>
     <header class="container mx-auto md:px-60">
-      <nav class="navbar h-28 rounded-[600px] bg-[#F85559] text-white">
-        <div class="navbar-start">
-          <div class="ps-16">
-            <ul class="flex justify-start gap-8">
-              <li><a>Home</a></li>
-              <li><a>About Us</a></li>
-              <li><a>Shop</a></li>
-              <li><a>All Fruits</a></li>
+      <nav class="flex justify-start items-center w-full h-28 rounded-[600px] bg-[#F85559] text-white">
+        <div class="ps-16">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+            <ul tabindex="0" class="flex justify-start gap-8 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li class="text-black"><a>Home</a></li>
+              <li class="text-black"><a>About Us</a></li>
+              <li class="text-black"><a>Shop</a></li>
+              <li class="text-black"><a>All Fruits</a></li>
             </ul>
           </div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="text-white"><a>Home</a></li>
+              <li class="text-white"><a>About Us</a></li>
+              <li class="text-white"><a>Shop</a></li>
+              <li class="text-white"><a>All Fruits</a></li>
+          </ul>
         </div>
         <div class="navbar-center">
           <div class="flex items-center">
@@ -61,7 +73,7 @@
       <section class="carousel w-full pt-10">
         <div id="slide1" class="carousel-item relative w-full">
           <img src="images/banner1.png" class="w-full opacity-80" />
-          <div class="absolute top-14 px-10">
+          <div class="absolute top-14 px-10 ">
             <h2 class="font-extrabold text-white text-7xl text-center">
               Exotic tastes at your doorstep
             </h2>
@@ -148,8 +160,34 @@
           </div>
         </div>
       </section>
+
+      <!-- fruit types section -->
+      <section class="bg-[#FFF] shadow-lg -mt-24 z-10 absolute mx-24 hidden md:block">
+        <div class="flex items-center justify-center">
+          <div class="p-4">
+            <img src="images/fruit1.png" alt="">
+            <p class="pt-3 ps-7">Cheery</p>
+          </div>
+          <div class="p-4">
+            <img src="images/fruit2.png" alt="">
+            <p class="pt-3 ps-7">Orange</p>
+          </div>
+          <div class="p-4">
+            <img src="images/fruit3.png" alt="">
+            <p class="pt-3 ps-10">Apple</p>
+          </div>
+          <div class="p-4">
+            <img src="images/fruit4.png" alt="">
+            <p class="pt-3 ps-7">Strawberry</p>
+          </div>
+          <div class="p-4">
+            <img src="images/fruit5.png" alt="">
+            <p class="pt-3 ps-7">Pomegrante</p>
+          </div>
+        </div>
+      </section>
       <!-- Deal of the day section     -->
-      <section>
+      <section class="md:mt-52">
         <div
           class="flex flex-col md:flex-row px-12 md:items-center md:justify-between my-16"
         >
@@ -678,9 +716,11 @@
             </div>
           </div>
           <div class="card border-2 w-96 bg-base-100 shadow-xl mb-4">
-            <figure class="px-10 pt-10">
-              <img src="images/fruit9.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <div class="mx-2 md:mx-5">
+              <figure class="px-10 pt-10">
+                <img src="images/fruit9.png" alt="" class="rounded-xl" />
+              </figure>
+            </div>
             <div class="card-body items-center text-center">
               <h2 class="card-title py-4">12.90$ - 18.85$</h2>
               <hr class="w-3/4 text-[#12121299]" />
@@ -846,10 +886,10 @@
         </div>
       </section>
       <!-- Team Section -->
-      <section class="mt-24">
+      <section class="mt-24 mx-6 md:mx-0">
         <div class="hero" style="background-image: url(images/banner1.png)">
           <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content px-52">
+          <div class="hero-content text-center text-neutral-content px-2 md:px-52">
             <div class="text-center">
               <h1 class="mb-5 text-2xl md:text-5xl font-bold pt-24">
                 Meet the team section
@@ -860,7 +900,7 @@
                 making it over 2000 years old.
               </p>
               <div class="flex flex-col md:flex-row md:gap-10 pb-24">
-                <div class="">
+                <div class="mb-2">
                   <img
                     class="inline-block mb-5"
                     src="images/member1.png"
@@ -889,7 +929,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="">
+                <div class="mb-2">
                   <img
                     class="inline-block mb-5"
                     src="images/member2.png"
@@ -918,7 +958,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="">
+                <div class="mb-2">
                   <img
                     class="inline-block mb-5"
                     src="images/member3.png"
@@ -947,7 +987,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="">
+                <div class="mb-2">
                   <img
                     class="inline-block mb-5"
                     src="images/member4.png"
